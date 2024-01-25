@@ -1,0 +1,61 @@
+server:
+  port: 9099
+  servlet:
+    context-path: /la
+
+spring:
+  profiles:
+    active: test
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+#  datasource:
+#    url: jdbc:mysql://101.43.115.8:6033/t_test?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=GMT%2B8
+#    username: root
+#    password: ppxwmz
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#  redis:
+#    database: 0
+#    timeout: 30000
+#    host: 101.43.115.8
+#    port: 9736
+#    password:
+#  mail:
+#    host: smtp.163.com
+#    password: UUPLZRHJKISZVKBL # 授权码
+#    username: wuyidijun@163.com
+#    properties:
+#      mail:
+#        smtl:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+
+#mybatis-plus:
+#  mapper-locations: com.hape.mapper/*.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
+#  type-aliases-package: com.hape.entity
+#pagehelper:
+#  helper-dialect: mysql
+
+# 日志打印级别
+logging:
+  level:
+    root: info # 全体
+    com:
+      hape:
+        dao: info # 指定包
+#  pattern:
+#    console: "%d %crl(%p) --- [%16] %crl(%-40.40c){cyan} : %m %n" # 日志输出格式
+  file:
+    path: logs/language
+  logback:
+    rollingpolicy:
+      max-file-size: 1MB
+#      file-name-pattern: logs/language/%d{yyyyMMdd}/language.%d{yyyyMMdd}.%i.log
+      file-name-pattern: logs/language/language.%d{yyyyMMdd}.%i.log
