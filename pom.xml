@@ -50,13 +50,14 @@
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--            <version>2.2.5.RELEASE</version>-->
+<!--            <version>2021.1</version>-->
 <!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-spring-context</artifactId>
             <version>2.1.0-RC</version>
         </dependency>
+
         <!--网关gateway依赖-->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.cloud</groupId>-->

@@ -1,5 +1,5 @@
 server:
-#  port: 9099
+  port: 9099
   servlet:
     context-path: /la
 
@@ -8,7 +8,7 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
-  datasource: # ALTER TABLE per_user ADD COLUMN `phone` VARCHAR(20) COMMENT '手机号' AFTER country;
+  datasource:
     url: jdbc:mysql://101.43.115.8:6033/hape_db?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
     username: root
     password: ppxwmz
@@ -23,9 +23,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        ip: 101.43.115.8
-        cluster-name: la-user
-        server-addr: localhost:9099
+        server-addr: 101.43.115.8:8488
 #  mail:
 #    host: smtp.163.com
 #    password: UUPLZRHJKISZVKBL # 授权码
@@ -44,23 +42,6 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
   type-aliases-package: com.hape.dao.*.po
-
-
-# 日志打印级别
-#logging:
-#  level:
-#    root: info # 全体
-#    com:
-#      hape:
-#        mapper: info # 指定包
-##  pattern:
-##    console: "%d %crl(%p) --- [%16] %crl(%-40.40c){cyan} : %m %n" # 日志输出格式
-#  file:
-#    path: logs/language
-#  logback:
-#    rollingpolicy:
-#      max-file-size: 1MB
-#      file-name-pattern: logs/language/%d{yyyyMMdd}/language.%d{yyyyMMdd}.%i.log
 
 knife4j: # http://localhost:9099/la/doc.html
   enable: false
