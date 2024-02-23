@@ -53,8 +53,8 @@ logging:
 #  pattern:
 #    console: "%d %crl(%p) --- [%16] %crl(%-40.40c){cyan} : %m %n" # 日志输出格式
   file:
-    path: logs/language/
-    name: language.log
+    path: logs/language/language.log
+#    name: language.log
   logback:
     rollingpolicy:
       max-file-size: 1MB

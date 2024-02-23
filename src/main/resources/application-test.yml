@@ -24,6 +24,8 @@ spring:
     nacos:
       discovery:
         server-addr: 101.43.115.8:8488
+
+
 #  mail:
 #    host: smtp.163.com
 #    password: UUPLZRHJKISZVKBL # 授权码
